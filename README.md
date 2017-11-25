@@ -1,10 +1,11 @@
 # Business card
 
-I have gathered business card template examples.
+I have gathered business card template examples and updated them to produce
+PDF.
 
 * https://www.debian.org/events/materials/business-cards/
-    * flashy:          GIMP
-    * traditional:     TeX
-    * traditional-new: TeX
+    * flashy:          GIMP (no change)
+    * traditional:     TeX  (PDF)
+    * traditional-new: TeX  (PDF)
 * https://people.debian.org/~bod/card/
-    * bod:            TeX
+    * bod:            TeX   (PDF)
