@@ -1,7 +1,8 @@
 TEXFILES = $(wildcard *.tex)
 PSFILES = $(patsubst %.tex,%.ps,$(TEXFILES))
+PDFFILES = $(patsubst %.tex,%.pdf,$(TEXFILES))
 
-all: $(PSFILES)	
+all: $(PDFFILES)	
 
 %.ps: %.dvi
 	dvips $<
@@ -10,7 +11,11 @@ all: $(PSFILES)
 	latex $<
 	latex $<
 
+%.pdf: %.dvi
+	dvipdfmx $<
+
+
 clean:
-	-rm *.aux *.dvi *.log *.ps card.eps
+	-rm *.aux *.dvi *.log *.ps *.pdf card.eps
 
 
