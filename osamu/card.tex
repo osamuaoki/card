@@ -67,11 +67,10 @@
 %  rendered, see below.
 %
 \newcommand{\xname}{Osamu Aoki, Ph.D.}
-\newcommand{\xtitle}{Debian GNU/Linux Packager}
-\newcommand{\xaddress}{Brussels, Belgium}
-\newcommand{\xphone}{+32-(0)497-522 767}
+\newcommand{\xtitle}{Debian GNU/Linux Developer}
+\newcommand{\xproject}{Debian Documentation Project}
+\newcommand{\xaddress}{Yokohama, Japan}
 \newcommand{\xemail}{osamu@debian.org}
-\newcommand{\xemailb}{debian@aokiconsulting.com}
 \newcommand{\xurl}{http://www.debian.org/\~{}osamu/}
 %
 %  The PGP keys are printed in a tiny little font along the bottom
@@ -79,9 +78,9 @@
 %  let me know.
 %
 % You can get the fingerprint by doing : 'pgp -kvc <userid>'
-\newcommand{\xkeyid}{1024D/A8061F32}
-\newcommand{\xfprintA}{253A 4076 6A3B CCE2 A426}
-\newcommand{\xfprintB}{DEF5 E80F C4C1 A806 1F32}
+\newcommand{\xkeyid}{RSA4096}
+\newcommand{\xfprintA}{3133 724D 6207 8815 79E9}
+\newcommand{\xfprintB}{5D62 1E13 5688 1DD8 D791}
 
 % There is room for 3 keys, uncomment the bit below and duplicate the above
 
@@ -117,25 +116,23 @@
         \put(3,48){\line(1,0){83}}
 	%
         \put(35,42){\large\xname}
-        \put(35,39){\textsc{\scriptsize\xtitle}}
+        \put(35,38){\textsc{\scriptsize\xtitle}}
+        \put(35,34){\textsc{\scriptsize\xproject}}
 
-        \put(35,32){\textsf{\scriptsize \xemail}}
-        \put(35,28){\textsf{\scriptsize \xemailb}}
+        \put(35,28){\textsf{\scriptsize \xemail}}
         \put(35,24){\textsf{\scriptsize \xurl}}
-	       
         \put(35,20){\scriptsize \xaddress}
-	\put(35,16){\scriptsize \xphone}
         
 	% For Swirl
-        \put(5,12){\logo}
+        \put(5,14){\logo}
         
 	% For Bottle
 	%\put(10,10){\logo}
 
 	% 2 Line GPG key
-        \put(7.5,8){\texttt{\scriptsize \xkeyid:}}
-	\put(37.5,8){\texttt{\scriptsize \xfprintA}}
-        \put(37.5,5){\texttt{\scriptsize \xfprintB}}
+        \put(6,9){\texttt {\scriptsize \xkeyid:}}
+	\put(22,8){\texttt {\large \xfprintA}}
+        \put(22,4){\texttt {\large \xfprintB}}
 	% For one key [1.2x]
         %\put(5,6){\textsf{\pgpfont \xpgpkeyA}}
 	
