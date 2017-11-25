@@ -1,21 +1,14 @@
-TEXFILES = $(wildcard *.tex)
-PSFILES = $(patsubst %.tex,%.ps,$(TEXFILES))
-PDFFILES = $(patsubst %.tex,%.pdf,$(TEXFILES))
+# 
 
-all: $(PDFFILES)	
+all: card.pdf
+clean:
+	$(RM) card.aux card.dvi card.log card.ps card.pdf
 
 %.ps: %.dvi
 	dvips $<
 
 %.dvi: %.tex
 	latex $<
-	latex $<
 
-%.pdf: %.dvi
-	dvipdfmx $<
-
-
-clean:
-	-rm *.aux *.dvi *.log *.ps *.pdf card.eps
-
-
+%.pdf: %.ps
+	ps2pdf $<
