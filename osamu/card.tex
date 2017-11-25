@@ -55,14 +55,37 @@
 %  here, but of course it should be roughly the same proportion as the
 %  area available on the card.
 %
-\newcommand{\logo}{\includegraphics{./swirl.eps}}
+%\newcommand{\logo}{\includegraphics{./swirl.eps}}
 
-\newcommand{\xname}{Osamu Aoki}
+%  The Bottle version of the logo was created the same as the above, xfig
+%  removed the debian words. Here is the conversion command:
+%    fig2dev -L ps -m 0.5 officiallogo.fig bottle.eps
+%\newcommand{\logo}{\includegraphics{./bottle.eps}}
+\newcommand{\logo}{\includegraphics{./swirl.eps}}
+%
+%  Text variables for the card.  If you want to change how these are
+%  rendered, see below.
+%
+\newcommand{\xname}{Osamu Aoki, Ph.D.}
+\newcommand{\xtitle}{Debian GNU/Linux Packager}
+\newcommand{\xaddress}{Brussels, Belgium}
+\newcommand{\xphone}{+32-(0)497-522 767}
 \newcommand{\xemail}{osamu@debian.org}
-\newcommand{\xphone}{+1 408 257 9411}
+\newcommand{\xemailb}{debian@aokiconsulting.com}
+\newcommand{\xurl}{http://www.debian.org/\~{}osamu/}
+%
+%  The PGP keys are printed in a tiny little font along the bottom
+%  edge of the card.  If you come up with a better way to fit them in,
+%  let me know.
+%
+% You can get the fingerprint by doing : 'pgp -kvc <userid>'
 \newcommand{\xkeyid}{1024D/A8061F32}
 \newcommand{\xfprintA}{253A 4076 6A3B CCE2 A426}
 \newcommand{\xfprintB}{DEF5 E80F C4C1 A806 1F32}
+
+% There is room for 3 keys, uncomment the bit below and duplicate the above
+
+\newcommand{\pgpfont}{\tt \fontsize{.08in}{.096in}\selectfont}
 
 %
 \begin{document}
@@ -82,19 +105,48 @@
     \put(-1,-1){\line(-1,0){3}}
     \put(180,-1){\line(1,0){3}}
 
-  \multiput(0,0)(0,51.0){5}{
+  \multiput(0,0)(0,51.0){5}{%
     % Ticks on the side of each card
     \put(-1,51){\line(-1,0){3}}
     \put(180,51){\line(1,0){3}}
-    \multiput(0,0)(89,0){2}{
+    \multiput(0,0)(89,0){2}{%
       \begin{picture}(89,51)(0,0)
-        \put(7.5,18){\logo}
-        \put(44.5,33){\large\xname}
-        \put(46,28){\textsf{\scriptsize \texttt{<}\xemail\texttt{>}}}
-        \put(47,24.5){\textsf{\scriptsize \xphone}}
+	%
+	%  Line across the top of the card.
+	%
+        \put(3,48){\line(1,0){83}}
+	%
+        \put(35,42){\large\xname}
+        \put(35,39){\textsc{\scriptsize\xtitle}}
+
+        \put(35,32){\textsf{\scriptsize \xemail}}
+        \put(35,28){\textsf{\scriptsize \xemailb}}
+        \put(35,24){\textsf{\scriptsize \xurl}}
+	       
+        \put(35,20){\scriptsize \xaddress}
+	\put(35,16){\scriptsize \xphone}
+        
+	% For Swirl
+        \put(5,12){\logo}
+        
+	% For Bottle
+	%\put(10,10){\logo}
+
+	% 2 Line GPG key
         \put(7.5,8){\texttt{\scriptsize \xkeyid:}}
 	\put(37.5,8){\texttt{\scriptsize \xfprintA}}
         \put(37.5,5){\texttt{\scriptsize \xfprintB}}
+	% For one key [1.2x]
+        %\put(5,6){\textsf{\pgpfont \xpgpkeyA}}
+	
+	% For two keys
+        %\put(5,8){\textsf{\pgpfont \xpgpkeyA}}
+        %\put(5,6){\textsf{\pgpfont \xpgpkeyB}}	
+        %\put(5,4){\textsf{\pgpfont \xpgpkeyC}}	% For three keys
+	
+	%  Line across the bottom of the card.
+	%
+        \put(3,3){\line(1,0){83}}
       \end{picture}}}
 \end{picture}
 \end{document}
