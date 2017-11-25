@@ -8,6 +8,6 @@ PDF.
     * traditional:     TeX  (PDF)
     * traditional-new: TeX  (PDF)
 * https://people.debian.org/~bod/card/
-    * bod:             TeX  (PDF)
+    * bod:             TeX  (PDF) -- baseline
 * https://github.com/osamuaoki/card (This repo)
-    * osamu:           TeX  (PDF)
+    * osamu:           TeX  (PDF) -- current RSA4096
