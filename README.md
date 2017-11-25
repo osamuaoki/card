@@ -8,4 +8,6 @@ PDF.
     * traditional:     TeX  (PDF)
     * traditional-new: TeX  (PDF)
 * https://people.debian.org/~bod/card/
-    * bod:            TeX   (PDF)
+    * bod:             TeX  (PDF)
+* https://github.com/osamuaoki/card (This repo)
+    * osamu:           TeX  (PDF)
