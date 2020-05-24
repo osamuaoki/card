@@ -11,3 +11,5 @@ PDF.
     * bod:             TeX  (PDF) -- baseline
 * https://github.com/osamuaoki/card (This repo)
     * osamu:           TeX  (PDF) -- current RSA4096
+* osamu-old-pdf
+    * My old ones
